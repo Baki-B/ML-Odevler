@@ -33,3 +33,7 @@ Kodu çalıştırdığımızda elde edilen sonuçları şu şekilde yorumlayabil
 Özdeğerler Birebir Aynı: Her iki yöntem de özdeğerleri $5$ ve $2$ olarak bulmaktadır. Karakteristik denklemi köklerine ayırmak ($(\lambda - 5)(\lambda - 2) = 0$), küçük boyutlu matrislerde tamamen doğru ve tutarlı çalışmaktadır.
 Özvektörlerin Yönü ve İşareti: İki çıktıyı karşılaştırdığımızda, manuel hesaplanan özvektör ile NumPy özvektörünün sayısal değerlerinin aynı olduğunu, ancak işaretlerinin (artı/eksi) ters olabildiğini görürüz. Örneğin; biri $\begin{bmatrix} 0.707 \\ 0.707 \end{bmatrix}$ iken diğeri $\begin{bmatrix} -0.707 \\ -0.707 \end{bmatrix}$ çıkabilir. Doğrusal cebirde her iki sonuç da matematiksel olarak doğrudur; çünkü özvektörler bir noktayı değil bir "doğrultuyu" temsil eder. Vektörün kendisi ile $-1$ ile çarpılmış hali aynı ekseni ifade etmektedir.
 Performans Farkı: Manuel kodumuz $2 \times 2$ bir matriste sorunsuz çalışsa da, matris boyutu büyüdükçe (örneğin görüntü işleme projelerindeki büyük boyutlu verilerde) determinant hesaplamak ve polinom kökü bulmak ciddi performans sorunları yaratır. Bu nedenle pratikte, arka planda optimize edilmiş C/Fortran algoritmaları kullanan numpy.linalg.eig fonksiyonu tercih edilmektedir.
+
+Kaynakça:
+https://www.geeksforgeeks.org/engineering-mathematics/eigen-values/
+https://www.geeksforgeeks.org/machine-learning/ml-linear-algebra-operations/
